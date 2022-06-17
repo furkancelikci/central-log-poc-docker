@@ -1,0 +1,38 @@
+{
+    "template": "logstash",
+    "settings": {
+        "number_of_shards": 1,
+		"number_of_replicas": 0
+    },
+    "mappings": {
+        "properties": {
+            "MessageTemplate": {
+                "type": "text"
+            },
+			"@Timestamp": {
+                "type": "date"
+            },
+			"Level": {
+                "type": "keyword"
+            },
+            "UUID": {
+                "type": "keyword"
+            },
+            "AppType": {
+                "type": "keyword"
+            },
+			"Direction": {
+                "type": "integer"
+            },            
+			"SourceContext": {
+                "type": "keyword"
+            },
+			"MachineName": {
+                "type": "keyword"
+            },
+			"Application": {
+                "type": "keyword"
+            }
+        }
+    }
+}
